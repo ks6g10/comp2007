@@ -47,22 +47,29 @@ The system access the same entity as the
 
 * User Location or Track
 
-The track data facilitates the function of providing and storing information about the devices' location.
+The track data facilitates the function of providing and storing information about the device location history.
 It will be used to show the device current and past locations on the device display.
+The user can mark single entries as significant waypoints and therefore assign a name of that entry.
 
 ** FORMATTING
 
-The track data have to contain the following attributes:
+The track data entries have to contain the following attributes:
 
 Valid Coordinates in longitude and latitude.
 Elevation in meters rounded to one decimal place.
 Time when location was accuried.
 Heading rounded to one decimal place.
+Optional:
+Name of entry.
 
 The trackdata should conform to an ordered list where first entry is the oldest entry relative to time.
 
+** Use
+The trackdata will be continusly appended by the system when the gps is active and read to update the display.
+
+
 ** DATA INTEGRITY AND RETENTION
-The only operation allowed by the system alone is permission to add new track data.
+The only operation allowed by the system alone is permission to append new track data.
 The system can not modify nor remove any exsisting trackdata, unless promted by the user. // fix scentence 
 The track data is not allowed to soly excist on volatile storage medium.
 Track data is required to be persistently stored on a non-volatile storage medium to prevent data loss.
