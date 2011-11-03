@@ -65,8 +65,13 @@ Name of entry.
 The trackdata should conform to an ordered list where first entry is the oldest entry relative to time.
 
 ** Use
+*** System 
 The trackdata will be continusly appended by the system when the gps is active and read to update the display.
-
+The system will access the the track data to display it on the device.
+*** User
+The user can mark entries to waypoints.
+The user can delete track data.
+The user can transfer track data though usb.
 
 ** DATA INTEGRITY AND RETENTION
 The only operation allowed by the system alone is permission to append new track data.
@@ -91,6 +96,12 @@ Data retention:  Major requirement,
 * System variables
 
 
+
+
+
+Consice
+
+The device have two main databases that consist of waypoint data and track data. the waypoint data is pre generated entries consisting of geographical coordinates in longitude and latitude, the name of the route, name of individual entries and elevation information at that location. The waypoint data is created by the user either on the device or transfered from a computer. The track data is generated from data acquired from the gps device. each track entry consist of geographical coordinates in longitude and latitude, elevation, entry time, heading and the extension name.
 
 
 * ref;
