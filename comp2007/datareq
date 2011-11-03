@@ -7,6 +7,8 @@ e) Integrity constraints;
 f) Data retention requirements.
 
 
+Coordinates should conform to the World Geodetic System 84.
+
 Waypoint
 
 The waypoint data facilitates the function of providing map coordinates entered by the user to be displayed on the device and as a reference towards the track data.
@@ -46,14 +48,26 @@ The system access the same entity as the user.
 User Location or Track
 The track data facilitates the function of providing and storing information about the devices' location.
 It will be used to show the device current and past locations on the device display.
+
+FORMATTING
+
 The track data have to contain the following attributes:
+
 Valid Coordinates in longitude and latitude.
-Elevation. 
+Elevation in meters rounded to one decimal place.
+Time when location was accuried.
+Heading rounded to one decimal place.
 
+The trackdata should conform to an ordered list where first entry is the oldest entry relative to time.
 
-
-
-
+DATA INTEGRITY AND RETENTION
+The only operation allowed by the system alone is permission to add new track data.
+The system can not modify nor remove any exsisting trackdata, unless promted by the user. // fix scentence 
+The track data is not allowed to soly excist on volatile storage medium.
+Track data is required to be persistently stored on a non-volatile storage medium to prevent data loss.
+Track data can be bufferd onto volatile storage medium if performance is needed.
+Track data is not allowed to be clobbered.
+Track data stored on non-volatile medium have highest priority to be updated when new gps data is acquired.
 
 
 
@@ -71,5 +85,6 @@ System variables
 
 
 ref;
+http://en.wikipedia.org/wiki/World_Geodetic_System https://www1.nga.mil/ProductsServices/GeodesyandGeophysics/WorldGeodeticSystem/Pages/default.aspx
 http://en.wikipedia.org/wiki/GPS_eXchange_Format
 Using and Abusing XML http://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=04455638
