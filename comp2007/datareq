@@ -1,1 +1,43 @@
  
+a) Types of information used by various functions;
+b) Frequency of use;
+c) Accessing capabilities;
+d) Data entities and their relationships;
+e) Integrity constraints;
+f) Data retention requirements.
+
+
+Waypoint
+
+The waypoint data facilitates the function of providing map coordinates to be displayed on the device and as a reference towards the device location.
+Data is stored in the open format of GPS eXchange Format as it is higly compatible and translateble towards other mapping formats and applications.
+The user must be able to view and modify the data in varius abstractions either through the device itself or by using the device as a usb slave peripheral.
+
+The waypoint data is during operation considered read-only by the system, unless it is modified through user input.
+
+
+Data Format: GPS eXchange Format
+GPS eXchange Format(gpx) is a de facto standard for storing gps data.[ref]
+Accessing capabilities:
+User:
+The database of waypoints must be stored in a visible partition allowing access for the user through the capabilities of slave usb mode,
+ the entity should be read and writable.
+System:
+The system access the same entity as the user.
+
+User Location or Track
+Data Format: GPS eXchange Format
+
+
+
+Data retention:  Major requirement, 
+
+
+System variables
+
+
+
+
+ref;
+http://en.wikipedia.org/wiki/GPS_eXchange_Format
+Using and Abusing XML http://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=04455638
