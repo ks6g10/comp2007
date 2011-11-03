@@ -9,12 +9,23 @@ f) Data retention requirements.
 
 Waypoint
 
-The waypoint data facilitates the function of providing map coordinates to be displayed on the device and as a reference towards the device location.
-Data is stored in the open format of GPS eXchange Format as it is higly compatible and translateble towards other mapping formats and applications.
+The waypoint data facilitates the function of providing map coordinates entered by the user to be displayed on the device and as a reference towards the track data.
+The data have to conform to the open xml format of GPS eXchange Format(could use GML instead) as it is higly compatible and translateble towards other mapping formats and applications.
+The waypoint data must contain the following attributes:
+Name of route.
+Name for each waypoint
+Valid Coordinates in longitude and latitude.
+Elevation. 
 The user must be able to view and modify the data in varius abstractions either through the device itself or by using the device as a usb slave peripheral.
+The waypoint data will in most cases only be read by the system as it is a reference only and will seldom be updated by the user.
 
-The waypoint data is during operation considered read-only by the system, unless it is modified through user input.
+DATA INTEGRITY AND RETENTION
 
+The waypoint data can not by any means be modyfied by the system unless it is requested by the user.
+The waypoint data should be persistently stored on a non-volatile storage medium to prevent data loss.
+The waypoint data can be bufferd onto volatile storage medium if performance is needed.
+The waypoint data should be verified to be correct before and after transfering it between storage mediums.
+If clobbering would occur between two different data files, user verification is needed to proceed.
 
 Data Format: GPS eXchange Format
 GPS eXchange Format(gpx) is a de facto standard for storing gps data.[ref]
@@ -25,7 +36,28 @@ The database of waypoints must be stored in a visible partition allowing access 
 System:
 The system access the same entity as the user.
 
+
+
+
+
+
+
+
 User Location or Track
+The track data facilitates the function of providing and storing information about the devices' location.
+It will be used to show the device current and past locations on the device display.
+The track data have to contain the following attributes:
+Valid Coordinates in longitude and latitude.
+Elevation. 
+
+
+
+
+
+
+
+
+
 Data Format: GPS eXchange Format
 
 
