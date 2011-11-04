@@ -101,10 +101,25 @@ Data retention:  Major requirement,
 
 Consice
 
-The device have two main databases that consist of waypoint data and track data. the waypoint data is pre generated entries consisting of geographical coordinates in longitude and latitude, the name of the route, name of individual entries and elevation information at that location. The waypoint data is created by the user either on the device or transfered from a computer. The track data is generated from data acquired from the gps device. each track entry consist of geographical coordinates in longitude and latitude, elevation, entry time, heading and the extension name.
+
+
+
+Types of data
+The device has two main databases that contain of waypoint data and track data. This data should be of the open xml format GPS eXchange Format to enable easy conversion and use in geographical applications. The waypoint data is pre generated entries consisting of geographical coordinates in longitude and latitude, the name of the route, name of individual entries and elevation information at that location. 
+The waypoint data is created by the user either on the device or transferred from a computer. The track data is generated from data acquired from the GPS device. Each track entry consists of geographical coordinates in longitude and latitude, elevation, entry time, heading and the extension name.
+Data integrity and retention
+To ensure the security and satisfaction of the device, precautions have to be taken on how to input and store the data. To prevent data loss or corruption, all waypoint and track data have to be stored on a non-volatile storage medium and during transfer between mediums the data have to be verified before and after the transfer. The data is allowed to reside in volatile memory as long as a master copy is stored on non-volatile storage. The device should not be able to modify nor delete any data without user prompt, however appending to the data files is allowed without user input. Track data is never allowed to be clobbered and waypoint data needs verification from the user before clobbering.
+Data access input output
+User
+The user should be able to access the data in two ways, by using the device or by using a computer. 
+The waypoint and track data will be accessed to display information about the locations of waypoints and the device in relation to each other. It will also be used to calculate and output data such as distance travelled, average speed and distance to destination to the user. The user can also mark certain track entries as special points of interest.
+The data should be stored at such logical location so that when the user connects the device to a computer, the user can access the data and upload new data if chosen to.
+System
+The system will periodically receive geographical data from the GPS that needs to be processed and appended to the track data. 
 
 
 * ref;
 http://en.wikipedia.org/wiki/World_Geodetic_System https://www1.nga.mil/ProductsServices/GeodesyandGeophysics/WorldGeodeticSystem/Pages/default.aspx
 http://en.wikipedia.org/wiki/GPS_eXchange_Format
 Using and Abusing XML http://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=04455638
+
